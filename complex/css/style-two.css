@@ -1,11 +1,11 @@
-/**** First Gallery ****/
-.first-gallery {
+/* Image Gallery Grid Styling */
+.gallery {
     display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-auto-rows: 220px;
-    width: 90vw;
-    margin: 0px auto 90px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 220px);
+    gap: 1em;
+    width: 80vw;
+    margin: 10px auto 80px;
 }
 
 .image {
@@ -18,35 +18,6 @@
 .image.active {
     opacity: 1;
     transition: all 0.5s;
-}
-
-.first-gallery > img:hover {
-    cursor:zoom-in;
-}
-
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 100px;
-}
-
-.footer-h3, .footer-s {color:  var(--bg-link)}
-
-/* Image Gallery Grid Styling */
-.gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 220px);
-    gap: 1em;
-    width: 80vw;
-    margin: 10px auto 80px;
-}
-
-.image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .image:hover {
@@ -64,9 +35,9 @@
         left: 0;
         bottom: 0;
         right: 0;
-    height: 0vh;
-    width: 10%;
-    transition: 500ms;
+    height: 100vh;
+    width: 100%;
+    transition: 500ms ease-in-out;
     opacity: 0;
     z-index: -1; /* Hides gallery */
 }
@@ -77,7 +48,7 @@
 
 /* Center elements inside modal when open is activated */
 .overlay.active {
-    z-index: 1; /* Allows it to come infront */
+    z-index: 3; /* Allows it to come infront */
     opacity: 1;
     height: 100vh; 
     width: 100%; 
