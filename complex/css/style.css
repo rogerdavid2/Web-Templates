@@ -37,6 +37,8 @@ body {
 
 .logo {
     color: var(--bg-link);
+    font-size: 25px;
+    font-weight: bolder;
 }
 
 /* Overlay Header */
@@ -50,6 +52,8 @@ body {
 
 .logo-nav {
     color: var(--overlay-link);
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .close-1 {
@@ -148,3 +152,10 @@ body {
 }
 
 .footer-h3, .footer-s {color:  var(--bg-link)}
+
+/***** ABOUT PAGE STYLING ******/
+.about-container {
+    background-color: azure;
+    height: 700px;
+    padding: .8em;
+}

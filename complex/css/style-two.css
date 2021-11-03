@@ -57,7 +57,8 @@
 /* Inner Modal Overlay style*/
 .overlay-inner {
     width: 340px;
-    height: 320px;
+    height: 340px;
+    pointer-events: none;
 }
 
 /* Styling for each grabbed picture */
