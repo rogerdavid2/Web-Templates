@@ -4,84 +4,50 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
+    <title>Complex Site</title>
+    <meta name="description" content="This is a sample gallery website made from scratch">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-two.css">
 </head>
 
-<nav class="nav">
-    <section class="nav-logo">
-        <a href="index.html" class="nav-logo-h2">Photography</a>
-    </section>
+<body>
+    <header class="header-container">
+        <a href="index.html" class="logo">Logo</a>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </header>
 
-    <ul class="nav-ul">
-        <li class="nav-li"><a href="about.html" class="nav-a">About</a></li>
-        <li class="nav-li"><a href="price.html" class="nav-a">Pricing</a></li>
-        <li class="nav-li"><a href="" class="nav-a">Location</a></li>
-    </ul>
-</nav>
-
-
-<header class="header">
-    <h2 class="header-h2">
-        About
-    </h2>
-    <p class="header-p">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur reprehenderit sed officia. Temporibus ex
-        magni autem in a, doloribus quis commodi adipisci eum fugiat placeat totam laboriosam! Dolor, obcaecati
-        consectetur?
-    </p>
-</header>
-
-<section class="grid-about">
-    <article class="g-two">
-        <section class="grid-portrait">
-            <div class="g-p-div">Sample Image [Erase this]
-                <!--<img class="bio-pic" src="images/1.jpg">-->
+    <!--This will get revealed this JS-->
+    <nav class="menu">
+        <header class="header-container-2">
+            <a href="index.html" class="logo-nav">Logo</a>
+            <div class="menu-close">
+                <span class="close-1">x</span>
             </div>
-        </section>
-
-        <article class="grid-bio">
-            <h2 class="grid-bio-h2">Hello, I am</h2>
-            <p class="grid-p">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis at dignissimos asperiores, vero aliquid
-                non. Cupiditate illo voluptas numquam incidunt! Quaerat labore eaque pariatur eos facere optio ipsam
-                dolore aperiam.
-            </p>
-        </article>
-
-
-    </article>
-</section>
-
-<section class="quote-c">
-    <h2 class="quote-h3">Social Media</h2>
-    <em class="em">Follow me on</em>
-    <div class="quote-c-socials">
-        <ul class="socials-ul">
-            <li class="socials-li"><a href="" class="socials-a">Instagram</a></li>
-            <li class="socials-li"><a href="" class="socials-a">Facebook</a></li>
-            <li class="socials-li"><a href="" class="socials-a">YouTube</a></li>
+        </header>
+        <ul>
+            <li><a class="nav-link active-link" href="index.html">Home</a></li>
+            <li><a class="nav-link" href="about.html">About</a></li>
+            <li><a class="nav-link" href="#">Gallery</a></li>
+            <li><a class="nav-link" href="#">Contact</a></li>
         </ul>
-    </div>
-</section>
+    </nav>
 
-<footer>
-    <section class="footer-social">
-        <h1 class="footer-h1">Contact</h1>
-        <p class="footer-p">Number: #goeshere
-        </p>
-        <a href="#" class="footer-btn">Call</a>
+    <section class="about-container">
+        <h3>We are an idependent studio</h3>
     </section>
 
-    <section class="footer-info" id="footer">
-        <h1 class="footer-i-p">Hours</h1>
-        <p class="footer-i-a">Monday - Friday</p>
-        <p class="footer-i-a">8AM - 7PM</p>
-    </section>
 
-</footer>
+    <footer class="footer">
+        <h3 class="footer-h3">©Your name</h3>
+        <a class="footer-s">Follow me on</a>
+    </footer>
+
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
