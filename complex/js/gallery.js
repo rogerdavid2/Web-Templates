@@ -4,6 +4,14 @@ function close() {
     overlay.classList.remove('active');
 }
 
+/* Using querySelectorAll requires a for each loop*/
+const movers = document.querySelectorAll('.btn');
+movers.forEach(move => {
+    move.addEventListener('click', function () {
+        console.log('works');
+    })
+});
+
 const divButtons = document.querySelectorAll('.project');
 divButtons.forEach(button => {
     button.addEventListener("click", () => {
