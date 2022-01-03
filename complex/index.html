@@ -8,7 +8,6 @@
     <meta name="description" content="This is a sample gallery website made from scratch">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style-two.css">
 </head>
 
 <body>
@@ -20,7 +19,6 @@
         </div>
     </header>
 
-    <!--This will get revealed this JS-->
     <nav class="menu">
         <header class="header-container-2">
             <a href="index.html" class="logo-nav">Logo</a>
@@ -37,39 +35,25 @@
     </nav>
 
     <section class="gallery">
-        <div class="project">
-            <img src="img/1.jpg" alt="First Image" class="image">
-        </div>
-        <div class="project">
-            <img src="img/2.jpg" alt="Second Image" class="image">
-        </div>
-        <div class="project">
-            <img src="img/3.jpg" alt="Third Image" class="image">
-        </div>
-        <div class="project">
-            <img src="img/4.jpg" alt="Fourth Image" class="image">
-        </div>
-        <div class="project">
-            <img src="img/5.jpg" alt="Fifth Image" class="image">
-        </div>
-        <div class="project">
-            <img src="img/6.jpg" alt="Sixth Image" class="image">
-        </div>
-        <div class="project">
-            <img src="img/7.jpg" alt="Sevent Image" class="image">
-        </div>
-        <div class="project">
-            <img src="img/8.jpg" alt="Eighth Image" class="image">
-        </div>
-
-        <div class="overlay">
-            <div class="close">x</div>
-            <div class="overlay-inner">
-                <img src="" class="overlayImage">
+        <div class="gallery-container">
+            <div class="gallery-grid">
+                <img src="img/1.jpg" data-imagesrc="img/1.jpg" alt="tree" class="pic gallery-img">
+                <img src="img/2.jpg" data-imagesrc="img/2.jpg" alt="lake" class="pic gallery-img">
+                <img src="img/3.jpg" data-imagesrc="img/3.jpg" alt="camera" class="pic gallery-img">
+                <img src="img/4.jpg" data-imagesrc="img/4.jpg" alt="lime" class="pic gallery-img">
+                <img src="img/5.jpg" data-imagesrc="img/5.jpg" alt="dog" class="pic gallery-img">
+                <img src="img/6.jpg" data-imagesrc="img/6.jpg" alt="mountain" class="pic gallery-img">
+                <img src="img/7.jpg" data-imagesrc="img/7.jpg" alt="skyline" class="pic gallery-img">
+                <img src="img/8.jpg" data-imagesrc="img/8.jpg" alt="many limes" class="pic gallery-img">
             </div>
-            <!---<button class="btn" id="btn1">></button>-->
-            <!--<button class="btn" id="btn2">></button>-->
         </div>
+    </section>
+
+    <section class="lightbox-modal">
+        <button class="btn close">x</button>
+        <img alt="tree" class="lightbox-img">
+        <button class="btn left" id="left">L</button>
+        <button class="btn right" id="right">R</button>
     </section>
 
     <footer class="footer">
