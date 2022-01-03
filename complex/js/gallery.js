@@ -1,24 +1,79 @@
-const overlay = document.querySelector('.overlay');
-overlay.addEventListener('click', close);
-function close() {
-    overlay.classList.remove('active');
+const galleryImgs = [...document.querySelectorAll('.gallery-img')];
+const lightboxImg = document.querySelector('.lightbox-img');
+const lightboxContainer = document.querySelector('.lightbox-modal');
+const lastImage = galleryImgs.length - 1;
+
+const lightboxBtns = document.querySelectorAll('.btn');
+const btnRight = document.querySelector('#right');
+const btnLeft = document.querySelector('#left');
+const btnClose = document.querySelector('.close');
+let renderImage;
+
+function showLightBox() {
+    lightboxContainer.classList.add('active');
 }
 
-/* Using querySelectorAll requires a for each loop*/
-const movers = document.querySelectorAll('.btn');
-movers.forEach(move => {
-    move.addEventListener('click', function () {
-        console.log('works');
+function hideLightBox() {
+    lightboxContainer.classList.remove('active');
+}
+
+function activeImage(image) {
+    lightboxImg.src = image.dataset.imagesrc;
+    renderImage = galleryImgs.indexOf(image);
+    switch (renderImage) {
+        case 0:
+            btnLeft.classList.add('inactive');
+            break
+        case lastImage:
+            btnRight.classList.add('inactive');
+            break
+        default:
+            lightboxBtns.forEach(btn => {
+                btn.classList.remove('inactive');
+            })
+    }
+}
+
+function slideLeft() {
+    btnLeft.focus();
+    if (renderImage === 0) {
+        activeImage(galleryImgs[lastImage])
+    } else {
+        activeImage(galleryImgs[renderImage].previousElementSibling)
+    }
+}
+
+function slideRight() {
+    btnRight.focus();
+    if (renderImage === lastImage) {
+        activeImage(galleryImgs[0])
+    } else {
+        activeImage(galleryImgs[renderImage].nextElementSibling)
+    }
+}
+
+function slide(moveItem) {
+    if (moveItem.includes('left')) {
+        slideLeft();
+    } else {
+        slideRight();
+    }
+}
+
+galleryImgs.forEach(image => {
+    image.addEventListener('click', (e) => {
+        showLightBox();
+        activeImage(image);
     })
+})
+
+btnClose.addEventListener('click', () => {
+    hideLightBox()
 });
 
-const divButtons = document.querySelectorAll('.project');
-divButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        const imageSource = button.children[0].src;
-        gImages.src = imageSource;
-        overlay.classList.add('active');
+lightboxBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        slide(e.currentTarget.id);
     })
-});
-
-const gImages = document.querySelector('.overlayImage');
+})
